@@ -1,0 +1,40 @@
+{
+  "center_cross_shaft_material_mm3": 0.0,
+  "design": "pantilt_hc_v760_reference_v4_inboard_tilt_pulley",
+  "integral_tilt_part_features": 1,
+  "integral_tilt_solid_count": 1,
+  "interference_tolerance_mm3": 0.01,
+  "invalid_objects": [],
+  "pair_interference_mm3": {
+    "camera_vs_tilt_motor_nominal": 0.0,
+    "integral_cradle_vs_tilt_motor_nominal": 0.0,
+    "pan_adapter_vs_belt": 0.0,
+    "pan_tower_vs_motor": 0.0,
+    "tilt_left_608_vs_integral_cradle": 0.0,
+    "tilt_right_608_vs_integral_cradle": 0.0,
+    "tilt_right_yoke_vs_belt": 0.0,
+    "tilt_right_yoke_vs_integral_cradle": 0.0,
+    "tilt_right_yoke_vs_motor_pulley": 0.0,
+    "tilt_right_yoke_vs_motor_shaft": 0.0,
+    "tilt_slide_vs_belt": 0.0,
+    "tilt_standoffs_vs_belt": 0.0
+  },
+  "passed": true,
+  "pulley_closer_to_camera_than_right_bearing": true,
+  "pulley_to_camera_clearance_mm": 7.2,
+  "pulley_to_right_bearing_center_margin_mm": 20.2,
+  "pulley_to_right_yoke_clearance_mm": 1.6,
+  "schema_version": 3,
+  "through_tilt_shaft_present": false,
+  "tilt_pose_interference_mm3": {
+    "-60": 0.0,
+    "0": 0.0,
+    "60": 0.0
+  },
+  "tilt_pose_pair_interference_mm3": {
+    "-60": {},
+    "0": {},
+    "60": {}
+  },
+  "valid_breps": true
+}

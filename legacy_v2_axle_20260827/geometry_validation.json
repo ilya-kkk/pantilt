@@ -1,0 +1,29 @@
+{
+  "design": "pantilt_hc_v760_reference_v2",
+  "interference_tolerance_mm3": 0.01,
+  "invalid_objects": [],
+  "pair_interference_mm3": {
+    "camera_plate_vs_tilt_motor_nominal": 0.0,
+    "camera_vs_tilt_motor_nominal": 0.0,
+    "pan_adapter_vs_belt": 0.0,
+    "pan_tower_vs_motor": 0.0,
+    "tilt_right_yoke_vs_belt": 0.0,
+    "tilt_right_yoke_vs_driven_pulley": 0.0,
+    "tilt_right_yoke_vs_motor_pulley": 0.0,
+    "tilt_slide_vs_belt": 0.0,
+    "tilt_standoffs_vs_belt": 0.0
+  },
+  "passed": true,
+  "schema_version": 1,
+  "tilt_pose_interference_mm3": {
+    "-60": 0.0,
+    "0": 0.0,
+    "60": 0.0
+  },
+  "tilt_pose_pair_interference_mm3": {
+    "-60": {},
+    "0": {},
+    "60": {}
+  },
+  "valid_breps": true
+}

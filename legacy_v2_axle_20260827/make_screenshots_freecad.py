@@ -1,0 +1,246 @@
+import os
+import time
+
+import FreeCAD as App
+import FreeCADGui as Gui
+
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+DOC_PATH = os.path.join(ROOT, "pantilt_hc_v760_nema17_gt2.FCStd")
+SCREEN_DIR = os.path.join(ROOT, "screenshots")
+os.makedirs(SCREEN_DIR, exist_ok=True)
+
+for name in os.listdir(SCREEN_DIR):
+    if name.lower().endswith(".png"):
+        os.remove(os.path.join(SCREEN_DIR, name))
+
+doc = App.openDocument(DOC_PATH)
+Gui.setActiveDocument(doc.Name)
+Gui.ActiveDocument = Gui.getDocument(doc.Name)
+view = Gui.ActiveDocument.ActiveView
+
+for container in doc.Objects:
+    if container.TypeId == "App::Part":
+        try:
+            container.ViewObject.Visibility = True
+        except Exception:
+            pass
+
+COLORS = {
+    "printed": (0.66, 0.68, 0.70),
+    "printed_dark": (0.24, 0.27, 0.29),
+    "motor": (0.035, 0.04, 0.045),
+    "belt": (0.012, 0.014, 0.016),
+    "bearing": (0.43, 0.46, 0.49),
+    "steel": (0.64, 0.67, 0.70),
+    "pulley": (0.30, 0.33, 0.36),
+    "rubber": (0.04, 0.045, 0.05),
+    "camera": (0.055, 0.065, 0.075),
+    "camera_detail": (0.12, 0.14, 0.15),
+    "reference": (0.90, 0.08, 0.04),
+    "clearance": (0.10, 0.34, 0.86),
+}
+
+TILT_PIVOT = App.Vector(0, 0, 180)
+TILT_AXIS = App.Vector(0, 1, 0)
+PAN_PIVOT = App.Vector(0, 0, 0)
+PAN_AXIS = App.Vector(0, 0, 1)
+
+shape_objects = []
+for candidate in doc.Objects:
+    if candidate.TypeId != "Part::Feature":
+        continue
+    try:
+        if not candidate.Shape.isNull():
+            shape_objects.append(candidate)
+    except Exception:
+        pass
+original_shapes = {obj.Name: obj.Shape.copy() for obj in shape_objects}
+print("SCREENSHOT_OBJECTS", len(shape_objects))
+
+
+def role_for(obj):
+    try:
+        return obj.MaterialRole
+    except Exception:
+        return "printed"
+
+
+def apply_style():
+    for obj in shape_objects:
+        role = role_for(obj)
+        color = COLORS.get(role, COLORS["printed"])
+        try:
+            obj.ViewObject.ShapeColor = color
+            if hasattr(obj.ViewObject, "LineColor"):
+                obj.ViewObject.LineColor = color
+            if hasattr(obj.ViewObject, "DisplayMode"):
+                obj.ViewObject.DisplayMode = "Shaded"
+            if hasattr(obj.ViewObject, "LineWidth"):
+                obj.ViewObject.LineWidth = 1.0
+            if role == "clearance":
+                obj.ViewObject.Transparency = 72
+            elif obj.Label == "CAMERA_HC_V760_body_placeholder":
+                obj.ViewObject.Transparency = 12
+            else:
+                obj.ViewObject.Transparency = 0
+        except Exception:
+            pass
+
+
+def restore_shapes():
+    for obj in shape_objects:
+        obj.Shape = original_shapes[obj.Name].copy()
+
+
+def tilt_target(label):
+    return label.startswith("TILT_ROTATING_") or label.startswith("CAMERA_")
+
+
+def pan_target(label):
+    return (
+        label.startswith("PAN_ROTATING_")
+        or label.startswith("TILT_ROTATING_")
+        or label.startswith("CAMERA_")
+    )
+
+
+def set_pose(pan_angle=0, tilt_angle=0):
+    restore_shapes()
+    if tilt_angle:
+        for obj in shape_objects:
+            if tilt_target(obj.Label):
+                shape = obj.Shape.copy()
+                shape.rotate(TILT_PIVOT, TILT_AXIS, tilt_angle)
+                obj.Shape = shape
+    if pan_angle:
+        for obj in shape_objects:
+            if pan_target(obj.Label):
+                shape = obj.Shape.copy()
+                shape.rotate(PAN_PIVOT, PAN_AXIS, pan_angle)
+                obj.Shape = shape
+    doc.recompute()
+
+
+def set_visibility(mode="normal", show_axes=False):
+    for container in doc.Objects:
+        if container.TypeId == "App::Part":
+            try:
+                container.ViewObject.Visibility = True
+            except Exception:
+                pass
+    for obj in shape_objects:
+        label = obj.Label
+        visible = True
+        if label.startswith("REFERENCE_") or label in ("CAMERA_nominal_COG", "CAMERA_optical_axis"):
+            visible = show_axes
+
+        if mode == "pan_focus":
+            visible = (
+                label.startswith("BASE_")
+                or label.startswith("PAN_ROTATING_turntable")
+                or label.startswith("PAN_ROTATING_bearing_adapter")
+                or label.startswith("PAN_ROTATING_120T")
+                or label.startswith("PAN_ROTATING_platform")
+                or label.startswith("PAN_ROTATING_cable_guide")
+            )
+            if label.startswith("BASE_rubber"):
+                visible = False
+        elif mode == "tilt_focus":
+            visible = (
+                label.startswith("PAN_ROTATING_left_yoke")
+                or label.startswith("PAN_ROTATING_right_yoke")
+                or label.startswith("PAN_ROTATING_yoke_gusset")
+                or label.startswith("PAN_ROTATING_left_608")
+                or label.startswith("PAN_ROTATING_right_608")
+                or label.startswith("PAN_ROTATING_left_bearing")
+                or label.startswith("PAN_ROTATING_right_bearing")
+                or label.startswith("PAN_ROTATING_tilt_")
+                or label.startswith("TILT_ROTATING_")
+            )
+        obj.ViewObject.Visibility = visible
+
+
+def save_view(name, view_command, mode="normal", show_axes=False):
+    set_visibility(mode, show_axes=show_axes)
+    Gui.updateGui()
+    view_command()
+    view.fitAll()
+    Gui.updateGui()
+    time.sleep(0.2)
+    view.saveImage(os.path.join(SCREEN_DIR, name), 1600, 1200, "White")
+
+
+def make_exploded():
+    restore_shapes()
+    for obj in shape_objects:
+        label = obj.Label
+        delta = App.Vector(0, 0, 0)
+        if label.startswith("PAN_ROTATING_turntable") or label.startswith("PAN_ROTATING_bearing_adapter"):
+            delta = App.Vector(0, 0, 18)
+        elif label.startswith("PAN_ROTATING_120T") or label == "BASE_pan_GT2_252mm_belt":
+            delta = App.Vector(0, 0, 8)
+        elif label.startswith("PAN_ROTATING_left_yoke") or label.startswith("PAN_ROTATING_right_yoke"):
+            delta = App.Vector(0, 0, 34)
+        elif label.startswith("PAN_ROTATING_tilt_"):
+            delta = App.Vector(0, -38, 34)
+        elif label.startswith("PAN_ROTATING_left_608") or label.startswith("PAN_ROTATING_left_bearing"):
+            delta = App.Vector(0, 28, 34)
+        elif label.startswith("PAN_ROTATING_right_608") or label.startswith("PAN_ROTATING_right_bearing"):
+            delta = App.Vector(0, -28, 34)
+        elif label.startswith("TILT_ROTATING_") or label.startswith("CAMERA_"):
+            delta = App.Vector(48, 0, 58)
+        if delta.Length > 0:
+            shape = obj.Shape.copy()
+            shape.translate(delta)
+            obj.Shape = shape
+    doc.recompute()
+
+
+apply_style()
+print("SCREENSHOT_STAGE", "styled")
+view.setAxisCross(False)
+Gui.runCommand("Std_DrawStyle", 0)
+
+set_pose(pan_angle=-18, tilt_angle=0)
+print("SCREENSHOT_STAGE", "pose_01")
+save_view("01_isometric_v2.png", view.viewIsometric)
+print("SCREENSHOT_STAGE", "saved_01")
+
+set_pose()
+save_view("02_front_v2.png", view.viewFront)
+print("SCREENSHOT_STAGE", "saved_02")
+save_view("03_side_v2.png", view.viewRight)
+print("SCREENSHOT_STAGE", "saved_03")
+save_view("04_top_v2.png", view.viewTop)
+print("SCREENSHOT_STAGE", "saved_04")
+
+make_exploded()
+save_view("05_exploded_v2.png", view.viewIsometric)
+print("SCREENSHOT_STAGE", "saved_05")
+
+set_pose()
+save_view("06_pan_drive_focus_v2.png", view.viewTop, mode="pan_focus")
+print("SCREENSHOT_STAGE", "saved_06")
+save_view("07_tilt_drive_focus_v2.png", view.viewFront, mode="tilt_focus", show_axes=True)
+print("SCREENSHOT_STAGE", "saved_07")
+
+set_pose(pan_angle=-18, tilt_angle=60)
+save_view("08_tilt_plus60_v2.png", view.viewIsometric, show_axes=True)
+
+set_pose(pan_angle=-18, tilt_angle=-60)
+save_view("09_tilt_minus60_v2.png", view.viewIsometric, show_axes=True)
+
+set_pose(pan_angle=45, tilt_angle=18)
+save_view("10_pan45_tilt18_v2.png", view.viewIsometric)
+
+restore_shapes()
+set_visibility("normal", show_axes=False)
+doc.recompute()
+doc.saveAs(DOC_PATH)
+print("WROTE_SCREENSHOTS", SCREEN_DIR)
+App.closeDocument(doc.Name)
+try:
+    Gui.getMainWindow().close()
+except Exception:
+    pass

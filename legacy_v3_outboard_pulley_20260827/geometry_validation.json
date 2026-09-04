@@ -1,0 +1,33 @@
+{
+  "center_cross_shaft_material_mm3": 0.0,
+  "design": "pantilt_hc_v760_reference_v3_integral_tilt",
+  "integral_tilt_part_features": 1,
+  "integral_tilt_solid_count": 1,
+  "interference_tolerance_mm3": 0.01,
+  "invalid_objects": [],
+  "pair_interference_mm3": {
+    "camera_vs_tilt_motor_nominal": 0.0,
+    "integral_cradle_vs_tilt_motor_nominal": 0.0,
+    "pan_adapter_vs_belt": 0.0,
+    "pan_tower_vs_motor": 0.0,
+    "tilt_right_yoke_vs_belt": 0.0,
+    "tilt_right_yoke_vs_integral_cradle": 0.0,
+    "tilt_right_yoke_vs_motor_pulley": 0.0,
+    "tilt_slide_vs_belt": 0.0,
+    "tilt_standoffs_vs_belt": 0.0
+  },
+  "passed": true,
+  "schema_version": 2,
+  "through_tilt_shaft_present": false,
+  "tilt_pose_interference_mm3": {
+    "-60": 0.0,
+    "0": 0.0,
+    "60": 0.0
+  },
+  "tilt_pose_pair_interference_mm3": {
+    "-60": {},
+    "0": {},
+    "60": {}
+  },
+  "valid_breps": true
+}

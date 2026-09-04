@@ -1,0 +1,75 @@
+{
+  "center_cross_shaft_material_mm3": 0.0,
+  "design": "pantilt_hc_v760_reference_v6_direct_tilt_motor_mount",
+  "direct_tilt_motor_mount": {
+    "motor_body_mm": [
+      42.0,
+      42.0,
+      48.0
+    ],
+    "motor_front_face_gap_mm": 0.0,
+    "motor_model": "StepperOnline 17HS19-2004S1",
+    "mounting_square_mm": 31.0,
+    "pilot_diameter_mm": 22.0,
+    "pilot_diametral_clearance_mm": 0.6,
+    "pilot_height_mm": 2.0,
+    "separate_slide_or_standoff_features": 0,
+    "shaft_diameter_mm": 5.0,
+    "shaft_length_mm": 24.0,
+    "shaft_pulley_engagement_mm": 8.3,
+    "slot_count": 5,
+    "tension_travel_mm": 14.0
+  },
+  "integral_tilt_part_features": 1,
+  "integral_tilt_solid_count": 1,
+  "interference_tolerance_mm3": 0.01,
+  "invalid_objects": [],
+  "pair_interference_mm3": {
+    "camera_vs_tilt_motor_nominal": 0.0,
+    "integral_cradle_vs_tilt_motor_nominal": 0.0,
+    "pan_adapter_vs_belt": 0.0,
+    "pan_tower_vs_motor": 0.0,
+    "tilt_left_608_vs_integral_cradle": 0.0,
+    "tilt_right_608_vs_integral_cradle": 0.0,
+    "tilt_right_yoke_vs_belt": 0.0,
+    "tilt_right_yoke_vs_integral_cradle": 0.0,
+    "tilt_right_yoke_vs_motor_body": 0.0,
+    "tilt_right_yoke_vs_motor_pilot": 0.0,
+    "tilt_right_yoke_vs_motor_pulley": 0.0,
+    "tilt_right_yoke_vs_motor_shaft": 0.0
+  },
+  "passed": true,
+  "pulley_closer_to_camera_than_right_bearing": true,
+  "pulley_to_camera_clearance_mm": 7.2,
+  "pulley_to_right_bearing_center_margin_mm": 20.2,
+  "pulley_to_right_yoke_clearance_mm": 1.6,
+  "schema_version": 5,
+  "through_tilt_shaft_present": false,
+  "tilt_gt2_profile": {
+    "arc_count": 400,
+    "compensated_outside_diameter_mm": 50.22158178940651,
+    "edge_count": 480,
+    "face_valid": true,
+    "land_segment_count": 80,
+    "nominal_outside_diameter_mm": 50.42158178940651,
+    "pitch_diameter_mm": 50.92958178940651,
+    "pitch_mm": 2.0,
+    "profile": "GT2/2MR modified curvilinear",
+    "radial_print_clearance_mm": 0.1,
+    "solid_valid": true,
+    "tangential_print_clearance_mm": 0.1,
+    "teeth": 80,
+    "wire_closed": true
+  },
+  "tilt_pose_interference_mm3": {
+    "-60": 0.0,
+    "0": 0.0,
+    "60": 0.0
+  },
+  "tilt_pose_pair_interference_mm3": {
+    "-60": {},
+    "0": {},
+    "60": {}
+  },
+  "valid_breps": true
+}
