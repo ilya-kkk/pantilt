@@ -1,5 +1,7 @@
 # Pan/Tilt CAD Assembly V8
 
+The printable V9 redesign is in [`v9/`](v9/): [FreeCAD assembly](v9/output/PanTilt_V9_HC-V760.FCStd), [printing and assembly guide](v9/README_RU.md), [STL parts](v9/output/stl/) and [bill of materials](v9/BOM_RU.md). V9 uses ordinary M3 screws with side-fed nuts and places the fixed pan motor below the rotating platform. The V8 reference and its history are documented below.
+
 This workspace generates a reference-like pan/tilt concept for a Panasonic HC-V760 payload.
 
 ## Architecture

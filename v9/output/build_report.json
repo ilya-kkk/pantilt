@@ -1,0 +1,257 @@
+{
+  "parts": [
+    {
+      "name": "B01_Central_pedestal",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 227497.5611661855
+    },
+    {
+      "name": "B02_Leg_1",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18113.225244803692
+    },
+    {
+      "name": "B02_Leg_2",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18113.225244803685
+    },
+    {
+      "name": "B02_Leg_3",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18113.225244803692
+    },
+    {
+      "name": "B04_Motor_stand_-1",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 20965.73413827445
+    },
+    {
+      "name": "B04_Motor_stand_1",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 20965.734138274445
+    },
+    {
+      "name": "B03_Motor_stand_foot",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 48274.76070670981
+    },
+    {
+      "name": "B05_Pan_motor_deck",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 25717.305342679912
+    },
+    {
+      "name": "B06_Pan_608_retainer",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 7440.122590576955
+    },
+    {
+      "name": "P01_Pan_rotor_120T",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 65397.12351131964
+    },
+    {
+      "name": "P02_Pan_axial_retainer",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 188.49555921538757
+    },
+    {
+      "name": "P04_Yoke_left",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 76830.58171679269
+    },
+    {
+      "name": "P05_608_cap_1",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 5076.445612081917
+    },
+    {
+      "name": "P04_Yoke_right",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 122058.0703324719
+    },
+    {
+      "name": "P05_608_cap_-1",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 5076.44561208192
+    },
+    {
+      "name": "P03_Pan_platform",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 228552.79636528625
+    },
+    {
+      "name": "T02_Cheek_left",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 11501.06951466906
+    },
+    {
+      "name": "T03_Axial_retainer_1",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 188.49555921538754
+    },
+    {
+      "name": "T02_Cheek_right_80T",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 42905.60313715354
+    },
+    {
+      "name": "T03_Axial_retainer_-1",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 188.49555921538754
+    },
+    {
+      "name": "T01_Camera_saddle",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 30887.526770580687
+    }
+  ],
+  "fillets": [
+    {
+      "part": "Leg",
+      "radius": 4
+    },
+    {
+      "part": "Leg",
+      "radius": 4
+    },
+    {
+      "part": "Leg",
+      "radius": 4
+    },
+    {
+      "part": "profile",
+      "radius": 5
+    },
+    {
+      "part": "profile",
+      "radius": 5
+    },
+    {
+      "part": "Motor stand",
+      "radius": 3
+    },
+    {
+      "part": "profile",
+      "radius": 5
+    },
+    {
+      "part": "Motor stand",
+      "radius": 3
+    },
+    {
+      "part": "profile",
+      "radius": 5
+    },
+    {
+      "part": "profile",
+      "radius": 10
+    },
+    {
+      "part": "Yoke 1",
+      "radius": 3
+    },
+    {
+      "part": "Yoke -1",
+      "radius": 3
+    },
+    {
+      "part": "profile",
+      "radius": 3
+    },
+    {
+      "part": "Cheek 1",
+      "radius": 1
+    },
+    {
+      "part": "profile",
+      "radius": 3
+    },
+    {
+      "part": "Cheek -1",
+      "radius": 3
+    },
+    {
+      "part": "profile",
+      "radius": 3
+    },
+    {
+      "part": "profile",
+      "radius": 5
+    },
+    {
+      "part": "profile",
+      "radius": 3
+    }
+  ],
+  "pan_gt2": {
+    "profile": "GT2/2MR modified curvilinear",
+    "teeth": 120,
+    "pitch_mm": 2.0,
+    "pitch_diameter_mm": 76.39437268410977,
+    "nominal_outside_diameter_mm": 75.88637268410977,
+    "compensated_outside_diameter_mm": 75.68637268410977,
+    "radial_print_clearance_mm": 0.1,
+    "tangential_print_clearance_mm": 0.1,
+    "arc_count": 600,
+    "land_segment_count": 120,
+    "edge_count": 720,
+    "wire_closed": true,
+    "face_valid": true,
+    "solid_valid": true,
+    "axis": "Z",
+    "bore_diameter_mm": 58
+  },
+  "tilt_gt2": {
+    "profile": "GT2/2MR modified curvilinear",
+    "teeth": 80,
+    "pitch_mm": 2.0,
+    "pitch_diameter_mm": 50.92958178940651,
+    "nominal_outside_diameter_mm": 50.42158178940651,
+    "compensated_outside_diameter_mm": 50.22158178940651,
+    "radial_print_clearance_mm": 0.1,
+    "tangential_print_clearance_mm": 0.1,
+    "arc_count": 400,
+    "land_segment_count": 80,
+    "edge_count": 480,
+    "wire_closed": true,
+    "face_valid": true,
+    "solid_valid": true
+  },
+  "parameters": {
+    "Tilt axis X": 10.3,
+    "Tilt axis Z": 197.0,
+    "Pan motor X": -99.88374962336084,
+    "Tilt motor X": -35.7,
+    "Tilt motor Z": 122.07703343773498,
+    "m3_hole_d": 3.5,
+    "head_recess_d": 6.2,
+    "head_recess_depth": 3.3,
+    "nut_slot_width": 5.9,
+    "nut_slot_thickness": 2.8,
+    "bearing_608_pocket_d": 22.3,
+    "journal_d": 7.8,
+    "thrust_seat_d": 52.4
+  }
+}

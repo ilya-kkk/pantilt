@@ -1,0 +1,9 @@
+output/render_meshes.json
+*.log
+render_cpu
+__pycache__/
+output/*.FCStd1
+output/*.FCStd.*
+output/*.FCBak
+output/views/*.bin
+output/views/*.ppm

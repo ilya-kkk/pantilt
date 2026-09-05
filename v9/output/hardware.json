@@ -1,0 +1,852 @@
+[
+  {
+    "name": "Pan608_cap_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      16.454482671904337,
+      9.499999999999998,
+      71.2
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Pan608_cap_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      -16.454482671904337,
+      9.499999999999998,
+      71.2
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Pan608_cap_2",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      -3.4902433775699565e-15,
+      -19.0,
+      71.2
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Leg_0_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      42.0,
+      0.0,
+      10
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Leg_0_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      53.0,
+      0.0,
+      10
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Leg_1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      -20.99999999999999,
+      36.373066958946424,
+      10
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Leg_1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      -26.49999999999999,
+      45.899346400575254,
+      10
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Leg_2_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      -21.000000000000018,
+      -36.37306695894641,
+      10
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Leg_2_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      -26.500000000000025,
+      -45.89934640057523,
+      10
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Motor_foot_-12",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      -45,
+      -12,
+      10
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Motor_foot_12",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      -45,
+      12,
+      10
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Stand_bottom_-1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      -127.88374962336084,
+      -30,
+      3.3
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Stand_top_-1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 12,
+    "nut": true,
+    "seat": [
+      -127.88374962336084,
+      -30,
+      60.7
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Stand_bottom_-1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      -71.88374962336084,
+      -30,
+      3.3
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Stand_top_-1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 12,
+    "nut": true,
+    "seat": [
+      -71.88374962336084,
+      -30,
+      60.7
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Stand_bottom_1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      -127.88374962336084,
+      30,
+      3.3
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Stand_top_1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 12,
+    "nut": true,
+    "seat": [
+      -127.88374962336084,
+      30,
+      60.7
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Stand_bottom_1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      -71.88374962336084,
+      30,
+      3.3
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Stand_top_1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 12,
+    "nut": true,
+    "seat": [
+      -71.88374962336084,
+      30,
+      60.7
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Pan_motor_0_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 6,
+    "nut": false,
+    "seat": [
+      -115.38374962336084,
+      -15.5,
+      60.7
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Pan_motor_0_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 6,
+    "nut": false,
+    "seat": [
+      -115.38374962336084,
+      15.5,
+      60.7
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Pan_motor_1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 6,
+    "nut": false,
+    "seat": [
+      -84.38374962336084,
+      -15.5,
+      60.7
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Pan_motor_1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 6,
+    "nut": false,
+    "seat": [
+      -84.38374962336084,
+      15.5,
+      60.7
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Rotor_platform_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      22.627416997969522,
+      22.62741699796952,
+      96.7
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Rotor_platform_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      -22.62741699796952,
+      22.627416997969522,
+      96.7
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Rotor_platform_2",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      -22.627416997969526,
+      -22.62741699796952,
+      96.7
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Rotor_platform_3",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      22.627416997969515,
+      -22.627416997969526,
+      96.7
+    ],
+    "axis": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "name": "Pan_axial",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 20,
+    "nut": true,
+    "seat": [
+      0,
+      0,
+      61.8
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Yoke_base_1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      -52,
+      71,
+      95.3
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Yoke_base_1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      0,
+      71,
+      95.3
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Yoke_base_1_2",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      34,
+      71,
+      95.3
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Tilt608_cap_1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      10.300000000000002,
+      80.7,
+      213.5
+    ],
+    "axis": [
+      0,
+      -1,
+      0
+    ]
+  },
+  {
+    "name": "Tilt608_cap_1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      -3.9894191624432356,
+      80.7,
+      188.75
+    ],
+    "axis": [
+      0,
+      -1,
+      0
+    ]
+  },
+  {
+    "name": "Tilt608_cap_1_2",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      24.589419162443235,
+      80.7,
+      188.75
+    ],
+    "axis": [
+      0,
+      -1,
+      0
+    ]
+  },
+  {
+    "name": "Yoke_base_-1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      -52,
+      -61.5,
+      95.3
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Yoke_base_-1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      0,
+      -61.5,
+      95.3
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Yoke_base_-1_2",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      34,
+      -61.5,
+      95.3
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Tilt_motor_0_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 12,
+    "nut": false,
+    "seat": [
+      -51.2,
+      -60.8,
+      106.57703343773498
+    ],
+    "axis": [
+      0,
+      -1,
+      0
+    ]
+  },
+  {
+    "name": "Tilt_motor_0_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 12,
+    "nut": false,
+    "seat": [
+      -51.2,
+      -60.8,
+      137.577033437735
+    ],
+    "axis": [
+      0,
+      -1,
+      0
+    ]
+  },
+  {
+    "name": "Tilt_motor_1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 12,
+    "nut": false,
+    "seat": [
+      -20.200000000000003,
+      -60.8,
+      106.57703343773498
+    ],
+    "axis": [
+      0,
+      -1,
+      0
+    ]
+  },
+  {
+    "name": "Tilt_motor_1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 12,
+    "nut": false,
+    "seat": [
+      -20.200000000000003,
+      -60.8,
+      137.577033437735
+    ],
+    "axis": [
+      0,
+      -1,
+      0
+    ]
+  },
+  {
+    "name": "Tilt608_cap_-1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      10.300000000000002,
+      -70.2,
+      213.5
+    ],
+    "axis": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "name": "Tilt608_cap_-1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      -3.9894191624432356,
+      -70.2,
+      188.75
+    ],
+    "axis": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "name": "Tilt608_cap_-1_2",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 10,
+    "nut": true,
+    "seat": [
+      24.589419162443235,
+      -70.2,
+      188.75
+    ],
+    "axis": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "name": "Cradle_foot_1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      0.3000000000000007,
+      59,
+      155.8
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Cradle_foot_1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      20.3,
+      59,
+      155.8
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Tilt_axial_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 25,
+    "nut": true,
+    "seat": [
+      10.3,
+      82,
+      197.0
+    ],
+    "axis": [
+      0,
+      -1,
+      0
+    ]
+  },
+  {
+    "name": "Cradle_foot_-1_0",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      0.3000000000000007,
+      -39,
+      155.8
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Cradle_foot_-1_1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 16,
+    "nut": true,
+    "seat": [
+      20.3,
+      -39,
+      155.8
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "name": "Tilt_axial_-1",
+    "thread": "M3",
+    "standard": "DIN 912",
+    "length_mm": 35,
+    "nut": true,
+    "seat": [
+      10.3,
+      -71.5,
+      197.0
+    ],
+    "axis": [
+      0,
+      1,
+      0
+    ]
+  }
+]
