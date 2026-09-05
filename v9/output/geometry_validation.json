@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "printable_parts": 21,
+  "issues": [],
+  "angle_properties": [
+    {
+      "part": "Pan",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "angle": 29.999999999999996,
+      "correct": true
+    },
+    {
+      "part": "Tilt",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angle": 29.999999999999996,
+      "correct": true
+    }
+  ],
+  "scope": "Saved BRep solids. Pan 0..350 deg /10 deg, tilt -60..60 deg /3 deg; separate sweeps. Contact-volume threshold 0.015 mm3. Belts are nominal envelopes and excluded from tooth engagement collisions. Camera dimensions inherited, not measured. Physical fit, fatigue and load capacity not tested.",
+  "step_export": {
+    "global_bounds_match": true,
+    "max_bounds_error_mm": 8.36877234178246e-11,
+    "exported_components": 128
+  }
+}
